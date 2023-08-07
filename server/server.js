@@ -11,7 +11,7 @@ app.use(cors());
 // data
 const dummyData = require("./Data");
 
-app.get("/getData", (req, res) => {
+app.get("/", (req, res) => {
   res.json(dummyData);
 });
 

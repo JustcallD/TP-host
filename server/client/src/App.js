@@ -8,7 +8,7 @@ const App = () => {
 
   const getData = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/getData");
+      const res = await axios.get("http://localhost:4000/");
       console.log(res.data);
       return res.data;
     } catch (error) {
