@@ -4,8 +4,17 @@ const app = express();
 // DotEnv
 const dotenv = require("dotenv");
 dotenv.config();
+// cors
+const cors = require("cors");
+app.use(cors());
 
-app.get("/", (req, res) => res.send("Hello World!"));
+// data
+const dummyData = require("./Data");
+
+app.get("/getData", (req, res) => {
+  res.json(dummyData);
+});
+
 // server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server: http://localhost:${PORT}`));
